@@ -1,0 +1,77 @@
+---
+title: "CH18 Dynamic Reports w R Markdown"
+output: html_document
+date: "2022-11-18"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+## Printing messages
+```{r stored_print_example, echo = FALSE}
+msg <- "**Hello world**"
+```
+
+Below is the message to see:
+
+`r msg`
+
+## Creating lists with vectors
+```{r pasted_list_example, echo = FALSE}
+# Create a vector of animals
+animals <- c("Lions", "Tigers", "Bears", "Oh mys")
+
+# Paste `-` in front of each animal and join the items together with
+# newlines between
+markdown_list <- paste("-", animals, collapse = "\n")
+```
+
+`r markdown_list`
+
+## Rendering Tables (further customization w kableExtra)
+```{r kable_example, echo = FALSE}
+library("knitr")
+
+# Make a data frame
+letters <- c("a", "b", "c", "d")
+numbers <- 1:4
+df <- data.frame(letters = letters, numbers = numbers)
+
+# "Return" the table to render it
+kable(df)
+```
+
+## Rendering Plots
+```{r plot_example, echo = FALSE}
+library("ggplot2") 
+
+# Plot of college education vs. poverty rates in the Midwest
+ggplot (data = midwest) +
+  geom_point(
+    mapping = aes(x = percollege, y = percadultpoverty, color = state)
+  ) +
+  scale_color_brewer(palette = "Set3")
+```
+
+
