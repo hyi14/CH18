@@ -6,6 +6,6 @@ There are 3 files:
 - .html
 
 # The URL for a website hosted with GitHub Pages
-https://GITHUB_USERNAME.github.io/REPO_NAME
+https://hyi14.github.io/CH18/
 
 This is practice for A4 so make sure to follow along carefully.
