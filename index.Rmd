@@ -1,0 +1,9 @@
+---
+title: "R Markdown in Action"
+output: html_document
+date: "2022-11-19"
+---
+```{r setup, include=FALSE}
+# source .R file
+source("analysis.R")
+```

@@ -74,4 +74,3 @@ ggplot (data = midwest) +
   scale_color_brewer(palette = "Set3")
 ```
 
-
